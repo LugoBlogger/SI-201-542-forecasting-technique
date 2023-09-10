@@ -14,7 +14,8 @@ untuk menentukan:
 
 Bandingkan hasil dari ketiga model tersebut menggunakan MSE,
 carilah model terbaik dan jelaskan mengapa model yang dipilih
-adalah model terbaik.
+adalah model terbaik. Pembagian data `train` dan `test`
+adalah 80%, 10%.
 
 Silahkan lihat contoh pengerjaan di `template-assignment.md`
 
