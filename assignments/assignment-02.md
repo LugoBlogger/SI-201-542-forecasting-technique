@@ -1,8 +1,8 @@
 # Assignment 02
 
 Analisa _time series_ dari data saham PT Bank Rakyat Indonesia 
-yang diberikan di `datasets/BBRI_JK_2019_01_2022_12.csv`.
-Khusus kolom 'Closed Price"
+yang diberikan di `datasets/BBRI_JK_2019_01_2022_12.csv` untu
+kolom "Close"
 
 Gunakan jupyter notebook pertemuan minggu 06 (atau sebelumnya)
 untuk melakukan _forecast_ dengan model berikut:
