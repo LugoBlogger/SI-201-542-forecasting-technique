@@ -31,10 +31,13 @@ Diberikan 5 dataset _time series_ saham perusahaan yang terdaftar di LQ45
 2. Hitung total _error_ MAE yang kalian dapatkan selama melakukan 
    _forecast_.
 
+3. Tulis kesimpulan yang kalian dapatkan dari melakukan perhitungan di poin
+   (1) dan (2) terhadap 5 dataset yang diberikan.
+
 Jawaban ditulis menggunakan template seperti sebelumnya (di 
 Assignment 01 dan 02) tapi usahakan
 lebh ringkas dan tidak menyertakan hasil-hasil yang tidak relevan.
 
 Silahkan mengerjakan secara individu atau berkelompok namun jawaban tetap harus 
-ditulis menggunakan bahasa sendiri (bukan _copy-paste_ dari jawaba
+ditulis menggunakan bahasa sendiri (bukan _copy-paste_ dari jawaban
 teman).
