@@ -696,16 +696,225 @@ ljung_box_test
 
 ## The function that forecasts the time series
 
-I think this is the most difficult function that we have created so far 
+I think this is the most difficult function to understand that we have created so far 
 (and also from the perspective of the students).
 In this function, we do forecast many times because we cannot do a single
-forecast with smaller `HORIZON` than the length of train set, 
-except if `HORIZON = len(TRAIN_SET)`. The basic idea is to perform forecasting
-up to `HORIZON`, and use train set and actual value up to `HORIZON` as a new 
+forecast with smaller `WINDOW` than the length of train set, 
+except if `WINDOW = HORIZON = len(TRAIN_SET)`. The basic idea is to perform forecasting
+up to `WINDOW`, and use train set and actual value up to `WINDOW` as a new 
 train set do again forecasting. After several times doing this, we have
 a full set prediction on train set. 
 
 First, we declare the general structure of the function
 ```py
+def rolling_forecast(df: pd.DataFrame, train_len: int, horizon: int, window: int, 
+                      method: str, 
+                      target_column_name: str, 
+                      exogenous_column_name: Union[list, str] = None,
+                      sarimax_order: tuple = None) -> list:
+  total_len = train_len + horizon
+
+  if method == "last":
+    pred_last_value = []
+
+    # we will write this section
+
+    return pred_last_value
+
+  elif method == "SARIMAX":
+    pred_SARIMAX = []
+
+    # we will write this section
+    
+    return pred_SARIMAX
+```
+
+We describe all the input arguments as following
+- `df`: a positional argument that has pandas DataFrame data type. This input will contains 
+   all target and exogeneous variables.
+- `train_len`: a positional argument that has an integer data type 
+   that is used to set the number of training set
+- `horizon`: a positional argument that has an integer data type that is used
+   to set how far we do rolling forecast and this number is equal to 
+   the length test set.
+- `window`: a positional argument that has an integer data type that is used 
+   to set the number of forecasting points.
+- `method`: a positional argument that has a string data type. There are
+   two possible methods: `{"last", "SARIMAX"}`
+- `target_column_name`: a positional argument that has a string data type.
+  In this time, we only limit to single target variables. 
+- `exogenous_column_name`: a keyword argument that has a string data type
+  or list of string data type. This argument specifies the column name(s)
+  that is corresponding the the exogenous variable(s).
+- `sarimax_order`: a keyword argument that has a tuple/list data type.
+  This argument specifies $(p, d, q, P, D, Q, m)$ of the SARIMAX model.
+
+The first line in the function body is to declare the variable `total_len`
+that is the total of data.  
+There are two `if` blocks that corresponds to the two available methods
+that are provided by the functions: last value model (baseline model)
+and SARIMAX model.
+
+Now we update the codes inside `if` block for `last` value model. 
+```py
+def rolling_forecast(df: pd.DataFrame, train_len: int, horizon: int, window: int, 
+                      method: str, 
+                      target_column_name: str, 
+                      exogenous_column_name: Union[list, str] = None,
+                      sarimax_order: tuple = None) -> list:
+  total_len = train_len + horizon
+
+  if method == "last":
+    pred_last_value = []
+
+    for i in range(train_len, total_len, window):
+      last_value = df[:i][target_column_name].iloc[-1]
+      pred_last_value.extend(last_value for _ in range(window))
+
+    return pred_last_value
+
+
+
+  # we omitted the line for SARIMAX model
+```
+
+The explanation of the block code above is we define `pred_last_value` to  
+store for each iteration the result of forecasting. If you notice that
+the iteration starting from `train_len` which is equal to the first prediction 
+in the date time of test set. The iteration moves with step window, so each
+forecasting, we have the number of windows forecasting points.
+`last_value` will be the last element in our training set. If you look at
+`df[:i]`, this will slice the dataframe `df` from index 0 up to (including) `i-1`.
+Then `target_column_name` will select the value from target variable.
+`.iloc[-1]` is select the last value of the training set.
+Each iteration this training set will change its size becomes larger as `i`
+updated each iteration by step `window`.
+The next line, we copy the last value as many as the value of `window`.
+The piece of code `last_value for _ in range(window)` will result a list
+and we put that list to `pred_last_value` list by the function `.extend()`
+
+Now we arrive to explain the `if` block for SARIMAX model forecasting.
+```py
+def rolling_forecast(df: pd.DataFrame, train_len: int, horizon: int, window: int, 
+                      method: str, 
+                      target_column_name: str, 
+                      exogenous_column_name: Union[list, str] = None,
+                      sarimax_order: tuple = None) -> list:
+  total_len = train_len + horizon
+
+  # we omitted the last_value model
+
+  elif method == "SARIMAX":
+    pred_SARIMAX = []
+
+    for i in range(train_len, total_len, window):
+      model = SARIMAX(df[:i][target_column_name], df[:i][exogenous_column_name], 
+                      order=sarimax_order[:3],
+                      seasonal_order=sarimax_order[3:], 
+                      simple_differencing=False)
+      res = model.fit(disp=False)
+      predictions = res.get_prediction(exog=df[:i + window][exogenous_column_name])
+      oos_pred = predictions.predicted_mean.iloc[-window:]   # oos: output of sarimax
+      pred_SARIMAX.extend(oos_pred)
+
+    return pred_SARIMAX
 
 ```
+
+The idea of the program for forecasting using SARIMAX model is the same
+as the last value model. First we initiate model object using
+`SARIMAX()` function with the best parameters that is provided
+in the argument `sarimax_model`. Then we fit the model the the data
+(target variable and exogenous variables). Forecasting is performed
+by function `.get_prediction()` and also we specify `exog` variables.
+When we speficy `exog`, we have to include exogenous variables by adding
+`i + window`.    
+In the line `oos_pred`, we take the mean (because `WINDOW=1`, the mean
+is equal the value itself) over the `WINDOW` by slicing the `predictions`
+with `.predicted_mean.iloc[-window:]`.   
+The output of this mean prediction is used as an extension (append) to
+the `pred_SARIMAX` list.
+
+
+## Performing forecasting on the time series
+
+First we decalare some paramters of `TRAIN_LEN`, `HORIZON`, and `WINDOW`.
+After that we calling the function `rolling_forecast()`.  To make the result
+of prediction independent to the previous DataFrame, we copied `target` to
+a new DataFrame `df_test_pred`.
+```py
+df_test_pred = target[idx_split:].copy()
+
+TRAIN_LEN = len(target_train)
+HORIZON = len(target_test)
+WINDOW = 1      # from the fact that SARIMAX at best predict one timestep
+
+pred_last_value = rolling_forecast(selected_macro_econ_data, TRAIN_LEN, HORIZON, WINDOW, 
+                                    "last", "realgdp")
+pred_sarimax = rolling_forecast(selected_macro_econ_data, TRAIN_LEN, HORIZON, WINDOW, 
+                              "SARIMAX", "realgdp", 
+                              ["realcons", "realinv", "realgovt", "realdpi", "cpi"],
+                              sarimax_order=(best_sarimax_p, d, best_sarimax_q,
+                                            best_sarimax_P, D, best_sarimax_Q, m))
+
+df_test_pred["pred_last_value"] = pred_last_value
+df_test_pred["pred_sarimax"] = pred_sarimax
+
+df_test_pred.head()
+```
+
+
+## Plot comparison between two models (last values and SARIMAX)
+
+The codes for plotting are basically the same as the previous plotting of time
+series, but we add an additional line to adjust the x-axis range for plotting
+by defining these two lines of codes
+```py
+start_idx = 0  # for better visualization
+xlim = [target_train["year"].iloc[start_idx], target_test["year"].iloc[-1]]
+```
+
+You can change `start_idx` to select the starting points of your ploting 
+for x-axis. It has to be trial-and-error selection to find the best
+zoom-in area for plotting. You can see in the next cell of the notebook, 
+the I have selected `start_idx=188` when zoom-in the plot.
+
+See the notebook `week-10.ipynb` for the complete code
+
+
+## Evaluate the models
+
+This codes will calculate the mean absolute percentage error (MAPE) with 
+the function from the lirary `scikit.sklearn`. The result is printed out
+with three decimal places by setting the f-string format to `:.3f`
+```py
+mape_last    = mean_absolute_percentage_error(df_test_pred["realgdp"], df_test_pred["pred_last_value"]) * 100
+mape_sarimax = mean_absolute_percentage_error(df_test_pred["realgdp"], df_test_pred["pred_sarimax"]) * 100
+
+print(f"   MAPE last: {mape_last:.3f}%")
+print(f"MAPE SARIMAX: {mape_sarimax:.3f}%")
+```
+
+The last codes are for plotting MAPE results into histogram plots. This codes 
+are not necessary, but useful for the presentation
+
+```py
+fig, ax = plt.subplots()
+
+x_array = ["last_value", "SARIMAX"]
+y_array = [mape_last, mape_sarimax]
+
+ax.bar(x_array, y_array)
+ax.grid("on")
+ax.set_xlabel("Methods")
+ax.set_ylabel("MAPE")
+ax.set_ylim([0, 1])
+
+for idx, val in enumerate(y_array):
+  ax.text(x=idx, y=val+0.05, s=f"{val:.2f}", ha="center")
+
+plt.show(fig)
+```
+
+In the `for` loop block, you can set `y=val+0.05` to another value
+to adjust the distance between the label of the bar to the top of the bar.
