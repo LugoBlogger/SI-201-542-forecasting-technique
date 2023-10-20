@@ -13,6 +13,8 @@ untuk melakukan _forecast_ dengan model berikut:
 Untuk model SARIMAX ikuti langkah-langkah yang telah disediakan di dalam  
 jupyter notebook `week-10.ipynb`.
 
+Data saham perlu diubah unitnya supaya sama dengan unit waktu di data inflasi.
+
 Bandingkan hasil dari kedua model tersebut menggunakan MAPE,
 carilah model terbaik dan jelaskan mengapa model yang dipilih
 adalah model terbaik. Pembagian data `train` dan `test`
