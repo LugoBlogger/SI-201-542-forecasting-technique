@@ -1,5 +1,8 @@
 # Final exam
 
+Pada ujian akhir ini akan dilaksanakan ujian dalam bentuk presentasi.
+Buatlah kelompok yang terdiri dari dua orang.
+
 1. Tentukan data _time series_ yang ingin kalian analisis. Data _time series_
    dapat diperoleh di berbagai tempat seperti: [kaggle](kaggle.com),
    [Google Dataset Search](https://datasetsearch.research.google.com/),
