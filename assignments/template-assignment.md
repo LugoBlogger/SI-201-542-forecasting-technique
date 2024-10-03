@@ -1,7 +1,7 @@
 # Template Assignment
 
-Nama: Nam lengkap    
-NIM: Nomor_induk_mahasiswa
+Nama: Nama lengkap    
+NIM: Nomor induk mahasiswa
 
 > **Catatan**  
 > Silahkan gunakan bahasa dan tulisan kalian sendiri.
