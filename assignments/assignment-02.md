@@ -1,19 +1,23 @@
 # Assignment 02
 
 Analisa _time series_ dari data saham PT Bank Rakyat Indonesia 
-yang diberikan di `datasets/BBRI_JK_2019_01_2022_12.csv` untuk
+yang diberikan di `datasets/BBRI-2019-01-01-2024-12-31.csv` untuk
 kolom "Close"
 
-Gunakan jupyter notebook pertemuan minggu 06 (atau sebelumnya)
+Data yang diberikan adalah data per hari transaksi (ada beberapa hari, 
+seperti hari libur, tidak ada transaksi). Ubahlah data _time series_ tersebut
+ke dalam data bulanan, dan lakukan prediksi dengan `HORIZON` dua bulan.
+
+Gunakan Jupyter Notebook pertemuan minggu 06 (atau sebelumnya)
 untuk melakukan _forecast_ dengan model berikut:
 1. rata-rata
 2. nilai akhir
 3. ARMA (jika memungkinkan)
 
 Untuk model ARMA ikuti langkah-langkah yang telah disediakan di dalam  
-jupyter notebook.
+Jupyter Notebook.
 
-Bandingkan hasil dari ketiga model tersebut menggunakan MSE ,
+Bandingkan hasil dari ketiga model tersebut menggunakan MAPE,
 carilah model terbaik dan jelaskan mengapa model yang dipilih
 adalah model terbaik. Pembagian data `train` dan `test`
 adalah 80%, 20%.
