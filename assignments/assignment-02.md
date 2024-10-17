@@ -1,7 +1,7 @@
 # Assignment 02
 
 Analisa _time series_ dari data saham PT Bank Rakyat Indonesia 
-yang diberikan di `datasets/BBRI-2019-01-01-2024-12-31.csv` untuk
+yang diberikan di `datasets/BBRI-2019-01-01-2023-12-31.csv` untuk
 kolom "Close"
 
 Data yang diberikan adalah data per hari transaksi (ada beberapa hari, 
