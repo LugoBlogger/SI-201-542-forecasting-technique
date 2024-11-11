@@ -1,29 +1,27 @@
 # Assignment 03
 
-Analisa _time series_ dari data saham PT Bank Rakyat Indonesia 
-yang diberikan di `datasets/BBRI_JK_2019_01_2022_12.csv` untuk
-kolom "Close" dan gunakan data inflasi di `dataset/Data Inflasi.xlsx`
-sebagai variabel _exogenous_
+Analyze the time series of the number of unemployment 
+and the number of people living in poverty in Indonesia from 2007
+to 2024
+You can download those time series data from 
+[here](https://www.bps.go.id/id/statistics-table/2/NTQzIzI=/tingkat-pengangguran-terbuka--februari-2024.html)
+and [here](https://www.bps.go.id/id/statistics-table/2/MTg1IzI=/jumlah-penduduk-miskin--ribu-jiwa--menurut-provinsi-dan-daerah.html)
 
-Gunakan jupyter notebook pertemuan minggu 10 (atau sebelumnya)
-untuk melakukan _forecast_ dengan model berikut:  
-1. nilai akhir
-2. SARIMAX 
+**Note**: The webpage above only shows the data for a selected year.
+You need to download the data for all the years.
 
-Untuk model SARIMAX ikuti langkah-langkah yang telah disediakan di dalam  
-jupyter notebook `week-10.ipynb`.
+Use Jupyter notebook in Week 11 to do forecasting with the following model
+1. last value
+2. VAR 
 
-Data saham perlu diubah unitnya supaya sama dengan unit waktu di data inflasi.
+Compare those two models using MAPE, and decide which model gives
+the best result and explain why you choose that model.
+Data division of `train` and `test` is 80% and 20%. 
 
-Bandingkan hasil dari kedua model tersebut menggunakan MAPE,
-carilah model terbaik dan jelaskan mengapa model yang dipilih
-adalah model terbaik. Pembagian data `train` dan `test`
-adalah 80%, 20%.
-
-Contoh pengerjaan sama seperti _template_ sebelumnya di `template-assignment.md`
-
-Untuk panduan penjelasan _coding_ notebook `week-10.ipynb` dapat
-dilihat di `assignments/program-desc-week-10.md`.
+**Hint**: The data of the number of people living in poverty is
+very small. What is the best strategy to have the same the same 
+number of data in for each month? Use this strategy to increase 
+the number of your data points.
 
 ## Mark scheme
 <table>

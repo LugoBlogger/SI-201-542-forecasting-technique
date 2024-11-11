@@ -1,0 +1,157 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="JVgh-mQUHA_Rs3axe7Js">
+    <mxGraphModel dx="2692" dy="1852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-1" value="\(z_0\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-2" value="\(z_1\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-3" value="\(z_2\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-700" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-4" value="\(z_3\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-5" value="\(z_4\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-6" value="\(z_5\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-7" value="\(z_6\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-8" value="\(z_7\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-550" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-9" value="\(z_8\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-10" value="\(z_9\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-490" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-11" value="\(z_{10}\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-460" y="-240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-13" value="\(&lt;br&gt;\begin{align*}&lt;br&gt;\phi_{k,k} = &lt;br&gt;&amp;nbsp; \left\{&lt;br&gt;&amp;nbsp; \begin{aligned}&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;amp;\operatorname{corr}(z_{t+1}, z_t), \quad &amp;amp;\text{for } k=1 \\&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;amp;\operatorname{corr}(z_{t+k} - \hat{z}_{t+k}, z_{t} - \hat{z}_t), \quad &amp;amp;\text{for } k \geq 2&lt;br&gt;&amp;nbsp; \end{aligned}&lt;br&gt;&amp;nbsp; \right.&lt;br&gt;\end{align*}\)" style="text;html=1;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-190" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-14" value="\(k=3\)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-15" value="\(\phi_{3,3}\) is the autocorrelation between \(z_t\) and \(z_{t+3}\)&lt;br&gt;with the linear dependence of \(z_t\) on \(z_{t+1}\) through \(z_{t+2}\) removed.&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="70" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-16" value="the partial autocorrelation of lag 3, \(\phi_{3, 3}\)" style="text;html=1;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="40" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-17" value="\(z_0\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="140" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-18" value="\(z_1\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="140" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-19" value="\(z_2\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-700" y="140" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-20" value="\(z_3\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="140" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-21" value="\(z_4\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="140" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-22" value="\(z_5\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="140" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-23" value="\(z_6\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="140" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-24" value="\(z_7\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-550" y="140" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-28" value="\(z_3\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-29" value="\(z_4\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-30" value="\(z_5\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-610" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-31" value="\(z_6\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-580" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-32" value="\(z_7\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-550" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-33" value="\(z_8\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-34" value="\(z_9\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-490" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-35" value="\(z_{10}\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-460" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-36" value="For stationary processes" style="text;html=1;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-130" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-37" value="\(\hat{z}_{t+k} = \beta_1 z_{t+k-1} + \ldots + \beta_{k-1} z_{t+1}\)" style="text;html=1;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-100" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-38" value="\(\hat{z}_{t} = \beta_1 z_{t+1} + \ldots + \beta_{k-1} z_{t+k-1}\)" style="text;html=1;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-760" y="-70" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-39" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;\(\phi_{3,3} = \operatorname{corr}(z_{t+3} - \hat{z}_{t+3}, z_{t} - \hat{z}_t)\)&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-775" y="480" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-40" value="\(z_{t+3}\)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-41" value="\(z_{t}\)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-790" y="140" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-43" value="\(\hat{z}_{t} = \beta_1 z_{t+1} + \beta_{2} z_{t+2}\)" style="text;html=1;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-790" y="180" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-44" value="\(\hat{z}_{t+3} = \beta_1 z_{t+2} + \beta_{2} z_{t+1}\)" style="text;html=1;align=left;verticalAlign=top;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="270" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-45" value="\(z_{t} - \hat{z}_t\)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-810" y="330" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-46" value="\(z_0 - (\beta_1 z_1 + \beta_2 z_{2})\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-740" y="330" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-54" value="\(z_1 - (\beta_1 z_2 + \beta_2 z_{3})\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-600" y="330" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-55" value="\(z_2 - (\beta_1 z_3 + \beta_2 z_{4})\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-460" y="330" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-56" value="\(z_3 - (\beta_1 z_4 + \beta_2 z_{5})\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="330" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-57" value="\(z_{t+3} - \hat{z}_{t+3}\)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-840" y="400" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-58" value="\(z_3 - (\beta_1 z_2 + \beta_2 z_{1})\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-740" y="400" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-59" value="\(z_4 - (\beta_1 z_3 + \beta_2 z_{2})\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-600" y="400" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-60" value="\(z_5 - (\beta_1 z_4 + \beta_2 z_{3})\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-460" y="400" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Wx0MZx43W5k0n4hnPmrW-61" value="\(z_6 - (\beta_1 z_5 + \beta_2 z_{4})\)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="400" width="140" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
