@@ -2,7 +2,7 @@
 
 Analyze the time series of the number of unemployment 
 and the number of people living in poverty in Indonesia from 2007
-to 2024
+to 2024.
 You can download those time series data from 
 [here](https://www.bps.go.id/id/statistics-table/2/NTQzIzI=/tingkat-pengangguran-terbuka--februari-2024.html)
 and [here](https://www.bps.go.id/id/statistics-table/2/MTg1IzI=/jumlah-penduduk-miskin--ribu-jiwa--menurut-provinsi-dan-daerah.html)
@@ -19,7 +19,7 @@ the best result and explain why you choose that model.
 Data division of `train` and `test` is 80% and 20%. 
 
 **Hint**: The data of the number of people living in poverty is
-very small. What is the best strategy to have the same the same 
+very small. What is the best strategy to have the same 
 number of data in for each month? Use this strategy to increase 
 the number of your data points.
 
